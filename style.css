@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.subtitulo {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.caixa-texto {
+    background: #f8f9fa;
+    border-left: 4px solid #d4af37;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#mensagem-boas-vindas {
+    font-size: 15px;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.texto-aviso {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#loading {
+    color: #d4af37;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#lista-convidados {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Deixa o nome e o select lado a lado */
+.pessoa-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafbfc;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid #edf2f7;
+}
+
+.pessoa-nome {
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 15px;
+    text-align: left;
+}
+
+.pessoa-opcoes select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e0;
+    background: #fff;
+    font-size: 14px;
+    color: #2d3748;
+    cursor: pointer;
+    width: 220px;
+    transition: border-color 0.2s;
+}
+
+.pessoa-opcoes select:focus {
+    border-color: #d4af37;
+    outline: none;
+}
+
+#btn-enviar {
+    background-color: #2f855a;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 4px 12px rgba(47, 133, 90, 0.2);
+}
+
+#btn-enviar:hover {
+    background-color: #276749;
+}
+
+#mensagem-sucesso {
+    padding: 20px 0;
+    color: #2f855a;
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* Ajustes específicos para telas de celular pequenas */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    /* No celular, para não espremer, o nome fica em cima e o select embaixo ocupando a largura toda */
+    .pessoa-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 14px;
+    }
+
+    .pessoa-nome {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .pessoa-opcoes select {
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+    }
+}

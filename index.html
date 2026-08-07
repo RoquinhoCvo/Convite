@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite - Churrasco</title>
+    <!-- Importando uma fonte elegante do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Reserve esta data!</h1>
+        <p class="subtitulo">📅 Data: 10/10/2026 &nbsp;|&nbsp; 🕒 A partir das 18h30</p>
+        
+        <div id="loading">Carregando convite...</div>
+        
+        <div id="conteudo-convite" style="display: none;">
+            <div class="caixa-texto">
+                <p id="mensagem-boas-vindas"></p>
+            </div>
+            
+            <p class="texto-aviso">
+                Sua confirmação é muito importante para que possamos preparar tudo com tranquilidade. Para organizarmos tudo da melhor forma, pedimos que confirme sua presença até <strong>18/09/2026</strong>.
+            </p>
+
+            <div id="lista-convidados">
+                <!-- Os nomes do grupo aparecerão aqui centralizados -->
+            </div>
+
+            <button id="btn-enviar" onclick="enviarConfirmacao()">Confirmar Presença</button>
+        </div>
+
+        <div id="mensagem-sucesso" style="display: none;" class="message-box"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
