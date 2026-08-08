@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f4f6f9;
+    background-color: #ffffff;
     color: #333;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    background: #ffffff;
+    background: #0b4e09;
     padding: 40px 30px;
     border-radius: 16px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
@@ -27,22 +27,22 @@ body {
 
 h1 {
     font-family: 'Playfair Display', serif;
-    color: #2c3e50;
+    color: #fdfdfd;
     margin-bottom: 8px;
     font-size: 30px;
     font-weight: 700;
 }
 
 .subtitulo {
-    color: #7f8c8d;
+    color: #f9f9f9;
     font-size: 14px;
     margin-bottom: 25px;
     font-weight: 500;
 }
 
 .caixa-texto {
-    background: #f8f9fa;
-    border-left: 4px solid #d4af37;
+    background: #0a8b0e;
+    border-left: 4px solid #0a8b0e;
     padding: 18px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -51,7 +51,7 @@ h1 {
 
 #mensagem-boas-vindas {
     font-size: 15px;
-    color: #4a5568;
+    color: #fefefe;
     line-height: 1.6;
 }
 
@@ -76,12 +76,12 @@ h1 {
     gap: 12px;
 }
 
-/* Deixa o nome e o select lado a lado */
+/* Deixa o nome e as opções lado a lado */
 .pessoa-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fafbfc;
+    background: #0a8b0e;
     padding: 12px 16px;
     border-radius: 10px;
     border: 1px solid #edf2f7;
@@ -89,30 +89,32 @@ h1 {
 
 .pessoa-nome {
     font-weight: 600;
-    color: #2d3748;
+    color: #fefefe;
     font-size: 15px;
     text-align: left;
 }
 
-.pessoa-opcoes select {
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid #cbd5e0;
-    background: #fff;
+/* Estilo para os radio buttons */
+.pessoa-opcoes {
+    display: flex;
+    gap: 15px;
+    align-items: center;
     font-size: 14px;
-    color: #2d3748;
-    cursor: pointer;
-    width: 220px;
-    transition: border-color 0.2s;
+    color: #fefefe;
 }
 
-.pessoa-opcoes select:focus {
-    border-color: #d4af37;
-    outline: none;
+.pessoa-opcoes input[type="radio"] {
+    cursor: pointer;
+    accent-color: #2f855a;
+}
+
+.pessoa-opcoes label {
+    cursor: pointer;
+    font-weight: 500;
 }
 
 #btn-enviar {
-    background-color: #2f855a;
+    background-color: #14a25b;
     color: white;
     border: none;
     padding: 14px 20px;
@@ -129,12 +131,20 @@ h1 {
     background-color: #276749;
 }
 
+/* Estilo para quando o botão estiver desativado */
+#btn-enviar:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
 #mensagem-sucesso {
     padding: 20px 0;
-    color: #2f855a;
+    color: #fefefe;
     font-size: 16px;
     line-height: 1.6;
 }
+
 /* Ajustes específicos para telas de celular pequenas */
 @media (max-width: 480px) {
     body {
@@ -150,7 +160,6 @@ h1 {
         font-size: 24px;
     }
 
-    /* No celular, para não espremer, o nome fica em cima e o select embaixo ocupando a largura toda */
     .pessoa-item {
         flex-direction: column;
         align-items: stretch;
@@ -163,9 +172,18 @@ h1 {
         font-size: 16px;
     }
 
-    .pessoa-opcoes select {
-        width: 100%;
-        padding: 10px;
-        font-size: 15px;
+    .pessoa-opcoes {
+        justify-content: center;
     }
+}
+
+/* --- NOVA CAIXA DE AVISO DA DATA LIMITE --- */
+.caixa-aviso {
+    background-color: #0a8b0e;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    color: #fefefe;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
